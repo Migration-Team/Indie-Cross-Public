@@ -62,7 +62,7 @@
 	<haxelib name="linc_luajit" if="desktop || android"/>
 	<haxelib name="extension-androidtools" if="android" />
 	<haxelib name="systools" if="cpp"/>
-   	<ndll name="systools" haxelib="systools" if="cpp" />
+   	<ndll name="project/vlc/lib/Android/libvlc-v7.so" haxelib="hxCodec" if="android" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
