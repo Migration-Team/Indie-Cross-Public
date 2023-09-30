@@ -65,7 +65,7 @@
 	<ndll name="vlc" haxelib="hxCodec" if="android" />
 	<haxelib name="linc_luajit" if="desktop || android"/>
 	<haxelib name="extension-androidtools" if="android" />
-	<haxelib name="systools"/>
+	<haxelib name="systools" if="desktop"/>
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
