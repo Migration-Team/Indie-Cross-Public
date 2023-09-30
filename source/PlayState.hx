@@ -554,6 +554,7 @@ class PlayState extends MusicBeatState
 		// String for when the game is paused
 		detailsPausedText = "Paused - " + detailsText;
 
+		#if desktop
 		// Updating Discord Rich Presence.
 			var disSong:String = SONG.song;
 			if (HelperFunctions.shouldBeHidden(SONG.song.toLowerCase()))
@@ -571,6 +572,7 @@ class PlayState extends MusicBeatState
 			+ songScore
 			+ " | Misses: "
 			+ misses, iconRPC);
+		#end
 		#end
 
 		FlxG.game.setFilters(filters);
@@ -4332,7 +4334,7 @@ class PlayState extends MusicBeatState
 
 		allowedToHeadbang = false;
 
-		#if cpp
+		#if desktop
 		// Updating Discord Rich Presence (with Time Left)
 			var disSong:String = SONG.song;
 			if (HelperFunctions.shouldBeHidden(SONG.song.toLowerCase()))
@@ -4945,7 +4947,7 @@ class PlayState extends MusicBeatState
 					player3.onpause(true);
 			}
 
-			#if cpp
+			#if desktop
 			var disSong:String = SONG.song;
 			if (HelperFunctions.shouldBeHidden(SONG.song.toLowerCase()))
 				disSong = '[CONFIDENTIAL]';
@@ -4993,7 +4995,7 @@ class PlayState extends MusicBeatState
 			FlxG.sound.music.play();
 			Conductor.songPosition = FlxG.sound.music.time;
 
-			#if cpp
+			#if desktop
 			var disSong:String = SONG.song;
 			if (HelperFunctions.shouldBeHidden(SONG.song.toLowerCase()))
 				disSong = '[CONFIDENTIAL]';
@@ -5077,7 +5079,7 @@ class PlayState extends MusicBeatState
 
 			paused = false;
 
-			#if cpp
+			#if desktop
 			if (!specialIntro)
 			{
 				if (startTimer.finished)
@@ -5135,7 +5137,7 @@ class PlayState extends MusicBeatState
 				vocals.time = Conductor.songPosition;
 				vocals.play();
 
-				#if cpp
+				#if desktop
 				var disSong:String = SONG.song;
 				if (HelperFunctions.shouldBeHidden(SONG.song.toLowerCase()))
 					disSong = '[CONFIDENTIAL]';
@@ -6240,7 +6242,9 @@ class PlayState extends MusicBeatState
 		{
 			cannotDie = true;
 			transitioningToState = true;
+			#if desktop
 			DiscordClient.changePresence("Chart Editor", null, null, true);
+			#end
 			FlxG.switchState(new ChartingState());
 			Application.current.window.onFocusOut.remove(onWindowFocusOut);
 			FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, handleInput);
@@ -10093,6 +10097,7 @@ class PlayState extends MusicBeatState
 			songLength = FlxG.sound.music.length;
 
 			// Updating Discord Rich Presence (with Time Left)
+			#if desktop
 			var disSong:String = SONG.song;
 			if (HelperFunctions.shouldBeHidden(SONG.song.toLowerCase()))
 				disSong = '[CONFIDENTIAL]';
@@ -10111,6 +10116,7 @@ class PlayState extends MusicBeatState
 				+ misses, iconRPC, true,
 				songLength
 				- Conductor.songPosition);
+			#end
 		}
 	}
 
@@ -11646,7 +11652,7 @@ class PlayState extends MusicBeatState
 				}
 			}
 
-			#if cpp
+			#if desktop
 			// Game Over doesn't get his own variable because it's only used here
 			var disSong:String = SONG.song;
 			if (HelperFunctions.shouldBeHidden(SONG.song.toLowerCase()))
