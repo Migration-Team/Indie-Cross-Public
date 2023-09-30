@@ -996,10 +996,7 @@ class FreeplayState extends MusicBeatState
 
 				if (HelperFunctions.shouldBeHidden(songs[curSelected[freeplayType]].songName.toLowerCase()))
 					listenin = 'Freeplay - Listening to SOMETHING NEW :)';
-				#if desktop	
-				DiscordClient.changePresence(listenin, null);
-				#end
-	
+				
 				music.stop();
 	
 				waitshit.cancel();
