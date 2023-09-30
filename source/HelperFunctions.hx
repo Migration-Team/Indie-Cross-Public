@@ -390,6 +390,8 @@ class HelperFunctions
 		readableList = '';
 
 		return isOBS;
+		#else
+		return false;
 		#end
 	}
 
