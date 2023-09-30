@@ -64,9 +64,7 @@ import sys.thread.Thread;
 #if desktop
 import Discord.DiscordClient;
 #end
-#if cpp
 import sys.FileSystem;
-#end
 
 class PlayState extends MusicBeatState
 {
@@ -12222,6 +12220,7 @@ class PlayState extends MusicBeatState
 
 	function antiCheat()
 	{
+		#if desktop
 		if (!FlxG.fullscreen)
 		{
 			var output = new Process("tasklist", []).stdout.readAll().toString().toLowerCase();
@@ -12239,6 +12238,7 @@ class PlayState extends MusicBeatState
 				}
 			}
 		}
+		#end
 	}
 
 	function getCamOffsets()
