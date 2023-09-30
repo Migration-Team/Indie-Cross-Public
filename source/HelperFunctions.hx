@@ -356,6 +356,7 @@ class HelperFunctions
 	
 	public static function isRecording():Bool
 	{
+		#if desktop
 		var programList:Array<String> = 
 		[
 			'obs32',
@@ -389,6 +390,7 @@ class HelperFunctions
 		readableList = '';
 
 		return isOBS;
+		#end
 	}
 
 	public static function instExists(song:String):Bool
