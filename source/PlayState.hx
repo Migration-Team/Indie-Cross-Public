@@ -61,8 +61,10 @@ import sys.io.File;
 import sys.io.Process;
 import sys.thread.Thread;
 #end
-#if cpp
+#if desktop
 import Discord.DiscordClient;
+#end
+#if cpp
 import sys.FileSystem;
 #end
 
