@@ -61,10 +61,9 @@
     	<haxelib name="tentools" />
 	<haxelib name="linc_luajit" if="desktop || android"/>
 	<haxelib name="extension-androidtools" if="android" />
-	<haxelib name="systools" if="cpp"/>
+	<haxelib name="systools" if="desktop"/>
 
 	<haxelib name="hxCodec" if="desktop || android"/>	
-	<ndll name="project/vlc/lib/Android/libvlc-v7.so" haxelib="hxCodec" if="android" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
