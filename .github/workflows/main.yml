@@ -48,8 +48,8 @@ jobs:
           haxelib install flixel-ui
           haxelib install flixel-addons 2.11.0
           haxelib git tentools https://github.com/TentaRJ/tentools.git
-          haxelib git systools https://github.com/pwp114514/systools-test
           haxelib git hxCodec https://github.com/JonnycatMeow/hxCodec-2.5.1
+          haxelib git systools https://github.com/pwp114514/systools-test
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
           haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
@@ -166,8 +166,8 @@ jobs:
           haxelib install flixel-ui
           haxelib install flixel-addons 2.11.0
           haxelib git tentools https://github.com/TentaRJ/tentools.git
-          haxelib git systools https://github.com/pwp114514/systools-test
           haxelib git hxCodec https://github.com/JonnycatMeow/hxCodec-2.5.1
+          haxelib git systools https://github.com/pwp114514/systools-test.1
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
           haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
