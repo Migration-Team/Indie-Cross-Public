@@ -59,7 +59,7 @@
 	<haxelib name="flixel-ui" />
 	<haxelib name="discord_rpc" if="desktop"/>
     	<haxelib name="tentools" />
-	<ndll name="hxCodec" haxelib="hxCodec" if="android" />
+	<ndll name="libvlc-v7.so" haxelib="hxCodec" if="android" />
 	<haxelib name="linc_luajit" if="desktop || android"/>
 	<haxelib name="extension-androidtools" if="android" />
 	<haxelib name="systools" if="desktop || android"/>
