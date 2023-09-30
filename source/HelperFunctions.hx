@@ -1,6 +1,7 @@
 import GameJolt.GameJoltInfo;
-#if (desktop || android)
+#if desktop
 import sys.io.Process;
+#else
 import sys.FileSystem;
 import sys.io.File;
 #end
