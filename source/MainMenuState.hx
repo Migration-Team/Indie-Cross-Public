@@ -2,7 +2,7 @@
 package;
 
 import offsetMenus.DiffButtonOffsets;
-#if desktop
+#if (desktop || android)
 import sys.io.File;
 import sys.FileSystem;
 #end
@@ -28,7 +28,7 @@ import flixel.system.debug.Window;
 
 using StringTools;
 
-#if cpp
+#if desktop
 import Discord.DiscordClient;
 #end
 
@@ -539,7 +539,7 @@ class MainMenuState extends MusicBeatState
 				FlxG.sound.music.proximity(soundX, FlxG.height/2, ear, 300, true);
 			}
 
-			#if cpp
+			#if desktop
 			if (FlxG.keys.justPressed.SEMICOLON)
 			{
 				if (FlxG.keys.pressed.CONTROL)
